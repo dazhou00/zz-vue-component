@@ -1,23 +1,45 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
+  // {
+  //   path: "/display",
+  //   component: () => import("./views/display.vue"),
+  // },
+
+  // {
+  //   path: "/table-render",
+  //   component: () => import("./views/table-render.vue"),
+  // },
+  // {
+  //   path: "/table-slot",
+  //   component: () => import("./views/table-slot.vue"),
+  // },
+  // {
+  //   path: "/tree",
+  //   component: () => import("./views/tree.vue"),
+  // },
+  // {
+  //   path: "/input-number",
+  //   component: () => import("./views/input-number.vue"),
+  // },
   {
-    path: "/",
-    name: "Home",
-    component: Home,
+    path: "/checkbox",
+    component: () => import("../views/checkbox.vue"),
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
+    path: "/form",
+    component: () => import("../views/form.vue"),
+  },
+  {
+    path: "/alert",
+    component: () => import("../views/alert.vue"),
+  },
+  {
+    path: "/",
+    component: () => import("../views/index.vue"),
   },
 ];
 
